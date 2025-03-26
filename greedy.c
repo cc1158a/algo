@@ -23,6 +23,7 @@ int scheduling_problem(int *task, int n, int m)
     {
         machine[j] = task[j];
     }
+    j--;
     int min = task[0];
     int t = 0;
     while (j < n)
@@ -37,13 +38,11 @@ int scheduling_problem(int *task, int n, int m)
         for (int i = 0; i < m; i++)
         {
             machine[i] -= min;
-            if (machine[i] == 0)
+            if (machine[i] == 0 && j<n)
             {
-               if (j+1 < n)
-                {
-                    j++;
-                    machine[i] = task[j];
-                }
+                j++;
+                machine[i] = task[j];
+               
             }
         }
 
