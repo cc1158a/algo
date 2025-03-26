@@ -1,5 +1,5 @@
- #include "stdlib.h"
- #include "greedy.h"
+#include "stdlib.h"
+#include "greedy.h"
 /**
  * 设有 m 台完全相同的机器运行 n 个独立的任务，运行任务 i 所需要的时间为 ti。
  * 要求确 定一个调度方案，使得完成所有任务所需要的时间最短。
@@ -58,3 +58,5 @@ int scheduling_problem(int *task, int n, int m)
     free(machine);
     return t;
 }
+
+int scheduling_problem(int *task, int n, int m)
