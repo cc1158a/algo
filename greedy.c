@@ -39,7 +39,7 @@ int scheduling_problem(int *task, int n, int m)
             machine[i] -= min;
             if (machine[i] == 0)
             {
-               if (j < n)
+               if (j+1 < n)
                 {
                     j++;
                     machine[i] = task[j];
