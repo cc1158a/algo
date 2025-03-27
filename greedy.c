@@ -86,4 +86,4 @@ int scheduling_problem2(int *task, int n, int m){
     }
     return max;
 }
- 
+
