@@ -10,16 +10,15 @@
 
 int scheduling_problem(int *task, int n, int m)
 {
-    if (n < m)
+    if (n <= m)
     {
-        if (task[0])
-        {
-            return task[0];
-        }
+        // 任务已按从大到小排序，所以task[0]是最大的
+        return task[0];
     }
+    
     int *machine = (int *)malloc(sizeof(int) * m);
     int j = 0;
-    for (j = 0; j < n; j++)
+    for (j = 0; j < m; j++)
     {
         machine[j] = task[j];
     }
@@ -59,4 +58,32 @@ int scheduling_problem(int *task, int n, int m)
     return t;
 }
 
-int scheduling_problem(int *task, int n, int m)
+int scheduling_problem2(int *task, int n, int m){
+    if(n<=m){
+        return task[0];
+    }
+    int machine[50]={0};
+    for(int i=0;i<m;i++){
+        machine[i]=task[i];
+    }
+    
+    int minIndex=0;
+    for(int j=m;j<n;j++){
+      int min=machine[0];  
+        for(int i=0;i<m;i++){
+            if(min>machine[i]){
+                min=machine[i];
+                minIndex=i;
+            }
+        }
+        machine[minIndex]+=task[j];
+    }
+    int max=-1;
+    for(int i=0;i<m;i++){
+        if(max<machine[i]){
+            max=machine[i];
+        }
+    }
+    return max;
+}
+ 

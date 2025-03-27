@@ -16,7 +16,8 @@ int main()
     int n = 5;
     int tasks[] = {10, 8, 7, 6, 4}; // 任务时间从大到小排序
 
-    // 预期结果：12
+    // 预期结果：13
     scheduling_problem(tasks, n, m);
-    printf("done");
+    int r= scheduling_problem2(tasks, n, m);
+    printf("%d",r);
 }
