@@ -7,7 +7,7 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
 # 添加可执行文件
-add_executable(myprogram main.c sort.c sort.h  greedy.c greedy.h)
+add_executable(myprogram main.c sort.c sort.h  greedy.c greedy.h dp.h dp.c)
 
 # 包含目录
 include_directories(include)

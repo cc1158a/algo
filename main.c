@@ -12,12 +12,12 @@ int main()
     // qs(array3, 5);
 
     // 3台机器，5个任务
-    int m = 3;
-    int n = 5;
-    int tasks[] = {10, 8, 7, 6, 4}; // 任务时间从大到小排序
+    // int m = 3;
+    // int n = 5;
+    // int tasks[] = {10, 8, 7, 6, 4}; // 任务时间从大到小排序
 
-    // 预期结果：13
-    scheduling_problem(tasks, n, m);
-    int r= scheduling_problem2(tasks, n, m);
-    printf("%d",r);
+    // // 预期结果：13
+    // scheduling_problem(tasks, n, m);
+    // int r= scheduling_problem2(tasks, n, m);
+    //printf("%d",r);
 }
